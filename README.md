@@ -1,13 +1,15 @@
-# yushin-mac-triage
+# yushin-mac-artifact-collector
 
-> **macOS DFIR Artifact Collector** — a single-file, zero-dependency triage script for macOS incident response.
+> **macOS DFIR Artifact Collector** — a single-file, zero-dependency artifact collection script for macOS incident response.
 
 [![Shell](https://img.shields.io/badge/shell-bash-4EAA25?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
 [![macOS](https://img.shields.io/badge/macOS-10.15%2B-000000?logo=apple&logoColor=white)](https://support.apple.com/macos)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Status](https://img.shields.io/badge/status-active-brightgreen)]()
 
-A modular, evidence-grade artifact collector built for DFIR analysts who need rapid triage data from macOS endpoints — no agent installation, no Homebrew, no Python. Just `bash` + macOS built-in utilities.
+A modular, evidence-grade artifact collector built for DFIR analysts who need rapid forensic data from macOS endpoints — no agent installation, no Homebrew, no Python. Just `bash` + macOS built-in utilities.
+
+> **What it is:** an artifact *collector* (not an analyzer). It produces a hashed ZIP of forensic artifacts that you then triage, parse, or feed into your analysis pipeline of choice. For a companion analysis platform, see [yushin-mac-forensics-platform](https://github.com/Juwon1405/yushin-mac-forensics-platform).
 
 ---
 
@@ -28,7 +30,7 @@ A modular, evidence-grade artifact collector built for DFIR analysts who need ra
 # Full collection (all modules) — sudo recommended for full coverage
 sudo ./collector.sh
 
-# Quick mode (reduced log window, faster triage)
+# Quick mode (reduced log window, faster collection)
 sudo ./collector.sh --quick
 
 # Run specific modules only
@@ -142,7 +144,7 @@ Python and Node.js supply chain attack IOC detection. Built in response to the [
 | **Node.js hooks** | `preinstall` / `postinstall` script detection in `package.json` |
 | **Fork bomb indicator** | Python process count (exponential `.pth` re-trigger detection) |
 
-**Rapid litellm triage (single command):**
+**Rapid litellm sweep (single command):**
 
 ```bash
 ./collector.sh --quick --modules supply_chain
@@ -249,11 +251,11 @@ module_my_custom() {
 
 ---
 
-## 🤝 Companion Tool
+## 🤝 Companion Platform
 
-For a web-based **analyzer** that ingests this collector's ZIP output, parses artifacts into a searchable evidence table, and generates DFIR PDF reports (with optional local Ollama / OpenAI assistance), see:
+For a web-based **forensics platform** that ingests this collector's ZIP output, parses artifacts into a searchable evidence table, and generates DFIR PDF reports (with optional local Ollama / OpenAI assistance), see:
 
-➡️ **[yushin-mac-analyzer](https://github.com/Juwon1405/yushin-mac-analyzer)**
+➡️ **[yushin-mac-forensics-platform](https://github.com/Juwon1405/yushin-mac-forensics-platform)**
 
 ---
 
