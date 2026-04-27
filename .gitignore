@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX
+._*
+
+# Collector outputs
+*.zip
+*_collect/
+*.log
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local test artifacts
+test/
+tmp/
+out/
