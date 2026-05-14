@@ -1,5 +1,13 @@
 # yushin-mac-artifact-collector
 
+> **📦 Archived (2026-05).** Functionality has been superseded:
+> - The **supply-chain IOC sweep** module — the high-value part of this collector — has been ported cross-platform and is now part of **[agentic-dart](https://github.com/Juwon1405/agentic-dart)** as `dart_mcp._v05_supply_chain` (6 typed MCP functions covering Windows / Linux / macOS).
+> - General macOS collection is better served by **[Velociraptor](https://docs.velociraptor.app/)** with the `MacOS.Forensics.*` artifact library, normalized into Agentic-DART's `evidence_root` layout via **[agentic-dart-collector-adapter](https://github.com/Juwon1405/agentic-dart-collector-adapter)**.
+>
+> This repo remains public as a reference artifact for the supply-chain IOC patterns it originated. No further changes planned.
+
+---
+
 > **macOS DFIR Artifact Collector** — a single-file, zero-dependency artifact collection script for macOS incident response.
 
 [![Shell](https://img.shields.io/badge/shell-bash-4EAA25?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
